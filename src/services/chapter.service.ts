@@ -1,7 +1,6 @@
 // services/chapter.service.ts
 import { JSDOM } from "jsdom";
 import { ChapterContent } from "@/types/chapter.types";
-import { log } from "console";
 
 export class ChapterService {
   static async fetchChapter(novel: string, chapter: string): Promise<Response> {

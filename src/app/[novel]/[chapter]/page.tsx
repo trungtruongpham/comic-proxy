@@ -5,10 +5,6 @@ import { ChapterParams } from "@/types/chapter.types";
 import { ChapterNavigation } from "./chapter-navigation";
 import { ChapterContent } from "./chapter-content";
 
-interface PageProps {
-  params: ChapterParams;
-}
-
 export default async function ChapterPage({
   params,
 }: {
