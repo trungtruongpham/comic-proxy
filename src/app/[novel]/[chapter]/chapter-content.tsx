@@ -6,7 +6,7 @@ interface ChapterContentProps {
 
 export function ChapterContent({ title, content }: ChapterContentProps) {
   return (
-    <div className="bg-gray-800 text-gray-100 rounded-lg shadow-lg p-6">
+    <div className="bg-gray-800 text-gray-100 rounded-lg shadow-lg p-2">
       <h1 className="text-2xl font-bold mb-4">{title}</h1>
       <article
         className="prose prose-invert max-w-none"
