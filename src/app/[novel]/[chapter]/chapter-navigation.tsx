@@ -9,6 +9,7 @@ interface ChapterNavigationProps {
   chapter: number;
   prevIcon: React.ReactNode;
   nextIcon: React.ReactNode;
+  className?: string;
 }
 
 const NavigationButton = ({
@@ -19,7 +20,7 @@ const NavigationButton = ({
 }: NavigationProps) => {
   const newChapter = direction === "next" ? chapter + 1 : chapter - 1;
   const isDisabled = direction === "prev" && chapter === 1;
-  const label = direction === "next" ? "Next Chapter" : "Previous Chapter";
+  const label = direction === "next" ? "Next" : "Previous";
 
   return (
     <Link
@@ -40,9 +41,10 @@ export function ChapterNavigation({
   chapter,
   prevIcon,
   nextIcon,
+  className,
 }: ChapterNavigationProps) {
   return (
-    <nav className="flex justify-between mb-6">
+    <nav className={`flex justify-between mb-6 ${className}`}>
       <NavigationButton
         direction="prev"
         novel={novel}

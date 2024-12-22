@@ -39,6 +39,7 @@ export default async function ChapterPage({
         />
         <ChapterContent title={title} content={content} />
         <ChapterNavigation
+          className="mt-16 mb-24"
           prevIcon={<ChevronLeft className="w-5 h-5 mr-2" />}
           nextIcon={<ChevronRight className="w-5 h-5 ml-2" />}
           novel={novelInfo.novel}
