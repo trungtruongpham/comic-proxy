@@ -10,11 +10,8 @@ export default async function ChapterPage({
 }: {
   params: Promise<ChapterParams>;
 }) {
-  const novelInfo = await params; // Simplified assignment
+  const novelInfo = await params;
   const chapterNumber = novelInfo.chapter.replace("chapter-", "");
-
-  console.log("novelInfo: ", novelInfo);
-  console.log("chapterNumber: ", chapterNumber);
 
   try {
     const response = await ChapterService.fetchChapter(

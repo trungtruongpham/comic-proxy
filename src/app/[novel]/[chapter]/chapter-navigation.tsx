@@ -25,8 +25,9 @@ const NavigationButton = ({
   return (
     <Link
       href={`/${novel}/chapter-${newChapter}`}
-      className={`flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors
-        ${isDisabled ? "pointer-events-none opacity-50" : ""}`}
+      className={`flex items-center justify-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors
+        ${isDisabled ? "pointer-events-none opacity-50" : ""}
+        ${direction === "next" ? "flex-[2]" : "flex-1"}`}
       aria-disabled={isDisabled}
     >
       {direction === "prev" && icon}
@@ -44,7 +45,7 @@ export function ChapterNavigation({
   className,
 }: ChapterNavigationProps) {
   return (
-    <nav className={`flex justify-between mb-6 ${className}`}>
+    <nav className={`flex justify-between gap-x-10 mb-6 ${className}`}>
       <NavigationButton
         direction="prev"
         novel={novel}
