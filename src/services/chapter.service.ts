@@ -7,7 +7,7 @@ export class ChapterService {
     console.log("novel: ", novel);
     console.log("chapter: ", chapter);
 
-    return fetch(`https://truyenfull.io/${novel}/chuong-${chapter}`, {
+    return fetch(`https://truyenfull.vision/${novel}/chuong-${chapter}`, {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
